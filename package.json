@@ -1,0 +1,20 @@
+{
+  "name": "diw-nunjucks-project",
+  "version": "1.0.0",
+  "description": "Sample educational nunjucks project for Dabbling In Web",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nunjucks",
+    "express"
+  ],
+  "author": "David J. Cunningham <david@cunningdj.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.3.0",
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.0"
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  
+  <title>{{title}}</title>
+
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{imageUrl}}">
+  <meta property="og:image:width" content="415">
+  <meta property="og:image:height" content="740">
+<style>
+nav {
+  background-color: #333;
+  vertical-align: middle;
+  position: relative;
+  padding: 5px 0px;
+}
+
+.nav-item {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px 0px 0px 3px;
+  background-color: white;
+  color: #333;
+  font-family: arial, sans-serif;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+  <nav>
+      <a class="nav-item" href="/">HOME</a>
+      <a class="nav-item" href="/about">ABOUT</a>
+  </nav>
+  <div id="main-body">
+    {% block body %}
+    <p>PLACEHOLDER</p>
+    {% endblock %}
+  </div>
+</body>
+</html>

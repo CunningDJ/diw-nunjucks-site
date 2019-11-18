@@ -1,0 +1,32 @@
+{% extends "inherit/base.html" %}
+
+{% set title=a.title %}
+{% set description=a.description %}
+{% set image=a.imageUrl %}
+
+{% block body %}
+<h1 class="article__title">{{a.title}}</h1>
+<p class="article__author">by {{a.author}}</p>
+<div class="article__body">
+  {{a.body}}
+</div>
+
+<style>
+.article__title {
+  margin: 5px 0px;
+}
+.article__author {
+  margin: 5px 0px 5px 8px;
+}
+
+.article__body {
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+}
+.article__body p {
+  font-family: arial, sans-serif;
+}
+</style>
+{% endblock %}

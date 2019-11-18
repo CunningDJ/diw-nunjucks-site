@@ -1,0 +1,49 @@
+{% extends "inherit/base.html" %}
+
+{% set title="Nunjucks Sample Site" %}
+{% set description="Sample website using Nunjucks backend rendering." %}
+{% set imageUrl="https://via.placeholder.com/728x90.png?text=NUJUCKS+SITE" %}
+
+{% block body %}
+  <h1>Home Page</h1>
+  <p>Welcome!  Check out our articles!</p>
+  
+  <h2>Articles</h2>
+  {% for a in articles %}
+  <div class="article-listing">
+    <a href="/post/{{a.urlId}}" style="text-decoration:none"><h3
+       class="article-listing__title">{{a.title}}</h3></a>
+    <p>Author: <span style="color:red">{{a.author}}</span></p>
+    <p>{{a.description}}</p>
+  </div>
+  {% endfor %}
+
+<style>
+.article-listing {
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  font-family: arial, sans-serif;
+  padding: 3px 8px;
+  margin: 0px 0px 5px 0px;
+}
+
+.article-listing p {
+  margin: 3px 0px;
+}
+
+.article-listing__title {
+  text-decoration: none;
+  color: white;
+  margin: 3px 0px;
+}
+.article-listing__title:hover {
+  color: #C457FF;
+}
+.article-listing__title:active {
+  text-decoration: none;
+}
+</style>
+
+{% endblock %}
+
